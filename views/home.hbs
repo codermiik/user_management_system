@@ -10,14 +10,14 @@
     <h1 class="fw-bold">Users</h1>
   </div>
   <div class="col-6 d-flex justify-content-end">
-    <a href="/adduser" type="button" class="btn btn-primary align-self-center">+ add user</a>
+    <a href="/adduser" type="button" class="btn btn-primary align-self-center">+ Add user</a>
   </div>
 </div>
 
 <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
+     <!--- <th scope="col">#</th>--->
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email</th>
@@ -30,15 +30,14 @@
     {{#each rows}}
     <tr>
       <th scope="row">{{this.id}}</th>
-      <td>{{this.first_name}}</td>
       <td>{{this.last_name}}</td>
       <td>{{this.email}}</td>
       <td>{{this.phone}}</td>
       <td class="text-end">
-        <a href="/viewuser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
-        <a href="/edituser/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>
+        <a href="/viewuser/{{this.id}}" type="button" class="btn btn-warning btn-small"><i class="bi bi-eye"></i> View</a>
+        <a href="/edituser/{{this.id}}" type="button" class="btn btn-success btn-small"><i class="bi bi-pencil"></i>
           Edit</a>
-        <a href="/{{this.id}}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x"></i> Delete</a>
+        <a href="/{{this.id}}" type="button" class="btn btn-danger btn-small"><i class="bi bi-person-x"></i> Delete</a>
       </td>
     </tr>
     {{/each}}
